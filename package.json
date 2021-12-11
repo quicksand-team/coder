@@ -1,6 +1,8 @@
 {
   "private": true,
-  "name": "monorepo",
+  "name": "@quicksand/coder-srcs",
+  "type": "module",
+  "packageManager": "pnpm@6.23.6",
   "scripts": {
     "new": "modern new",
     "reset": "modern clear",
@@ -9,7 +11,9 @@
     "pre": "modern pre",
     "release": "modern release",
     "deploy": "modern deploy",
-    "lint": "modern lint"
+    "lint": "modern lint",
+    "prepare": "husky install",
+    "commit": "commit"
   },
   "engines": {
     "node": ">=14.17.6"
@@ -19,19 +23,17 @@
       "@modern-js"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet",
-      "git add"
+      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet"
     ],
     "*.{js,jsx,mjs,mjsx,cjs,cjsx}": [
-      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet",
-      "git add"
+      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet"
     ]
   },
   "eslintIgnore": [
@@ -48,8 +50,12 @@
     ]
   },
   "devDependencies": {
-    "@modern-js/monorepo-tools": "^1.0.0",
-    "@modern-js/plugin-jarvis": "^1.0.0"
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@commitlint/prompt-cli": "^15.0.0",
+    "@modern-js/monorepo-tools": "^1.1.1",
+    "@modern-js/plugin-jarvis": "^1.1.1",
+    "husky": "^7.0.4"
   },
   "publishConfig": {
     "access": "public",

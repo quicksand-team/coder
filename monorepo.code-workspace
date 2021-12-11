@@ -1,7 +1,7 @@
 {
   "folders": [
     {
-      "name": "monorepo",
+      "name": "coder项目集",
       "path": "."
     }
   ],
@@ -152,6 +152,7 @@
     },
     "emmet.triggerExpansionOnTab": true,
     "typescript.tsdk": "node_modules/typescript/lib",
-    "deno.enable": false
+    "deno.enable": false,
+    "cSpell.words": ["commitlint", "srcs"]
   }
 }
