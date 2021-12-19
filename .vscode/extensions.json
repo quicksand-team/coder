@@ -1,11 +1,12 @@
 {
   "recommendations": [
+    "styled-components.vscode-styled-components",
     "kumar-harsh.graphql-for-vscode",
     "dtsvet.vscode-wasm",
     "cpylua.language-postcss",
-    "editorconfig.editorconfig",
+    "EditorConfig.editorconfig",
     "dbaeumer.vscode-eslint",
-    "drknoxy.eslint-disable-snippets",
+    "drKnoxy.eslint-disable-snippets",
     "mkaufman.htmlhint",
     "streetsidesoftware.code-spell-checker",
     "msjsdiag.debugger-for-chrome",
@@ -19,7 +20,6 @@
     "bungcip.better-toml",
     "mikestead.dotenv",
     "gruntfuggly.todo-tree",
-    "vscode-icons-team.vscode-icons",
-    "styled-components.vscode-styled-components"
+    "vscode-icons-team.vscode-icons"
   ]
 }
